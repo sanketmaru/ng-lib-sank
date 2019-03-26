@@ -1,0 +1,14 @@
+<div class="carousel-container" *ngIf="data && data.length">
+    <owl-carousel #owlElement
+        [options]="{items: 1, dots: false, navigation: false}"
+        [items]="data"
+        [carouselClasses]="['owl-theme', 'row', 'sliding']">
+        <div class="item" *ngFor="let item of data;let i = index">
+            <!-- Project the content here using ng-template-outlet-->
+            <ng-container *ngTemplateOutlet="cardItemTmpl;context: {$implicit: item}"></ng-container>
+        </div>
+    </owl-carousel>
+  <div class="arrow-left" (click)="onLeft($event)"></div>
+  <div class="arrow-right" (click)="onRight($event)"></div>
+</div>
+

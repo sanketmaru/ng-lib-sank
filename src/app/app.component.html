@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<button (click)="setViewToCarousel()">Carousel View</button>
+<button (click)="setViewToGrid()">Grid View</button>
+
+<sank-carousel [data]="imagesData" *ngIf="isCarouselView()">
+    <ng-template #cardItem let-item>
+        <sank-card [item]="item"></sank-card>
+    </ng-template>
+</sank-carousel>
+
+<div class="row" *ngFor="let data of imagesData">
+    <ng-container *ngIf="isGridView()">
+        <sank-card [item]="data"></sank-card>
+    </ng-container>
+</div>
+
+<router-outlet></router-outlet>
