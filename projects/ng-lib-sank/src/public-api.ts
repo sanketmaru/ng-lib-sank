@@ -4,5 +4,5 @@
 
 export * from './lib/sank-carousel/sank-carousel.module';
 export * from './lib/sank-card/sank-card.module';
-export * from './lib/sidenav/sidenav.module';
-
+export * from './lib/drawer/drawer.module';
+export * from './lib/toolbar/toolbar.module';

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DrawerConfig, DrawerItemComponent } from 'ng-lib-sank';
 
 enum View {
   GRID = 'grid',
@@ -13,6 +14,20 @@ enum View {
 export class AppComponent {
   public imagesData = [];
   public view: string = View.CAROUSEL;
+  public components: [DrawerConfig<DrawerItemComponent>, DrawerConfig<DrawerItemComponent>] = [
+    {
+      type: DrawerItemComponent,
+      context: {
+        name: 'First Component'
+      }
+    },
+    {
+      type: DrawerItemComponent,
+      context: {
+        name: 'Second Component'
+      }
+    }
+  ];
   constructor() {
     this.imagesData = [{
       title: 'Image 1',

@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgLibSankCarouselModule, NgLibSankCardModule, SidenavModule } from 'ng-lib-sank';
+import { NgLibSankCarouselModule, NgLibSankCardModule, DrawerModule, ToolbarModule } from 'ng-lib-sank';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,8 @@ import { NgLibSankCarouselModule, NgLibSankCardModule, SidenavModule } from 'ng-
     AppRoutingModule,
     NgLibSankCarouselModule,
     NgLibSankCardModule,
-    SidenavModule
+    DrawerModule,
+    ToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

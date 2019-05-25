@@ -14,11 +14,13 @@
         <sank-card [item]="data"></sank-card>
     </ng-container>
 </div> -->
-<ng-container>
-    <div class="container">
-        <common-sidenav></common-sidenav>
-    </div>
-    
-</ng-container>
 
+<common-toolbar></common-toolbar>
+
+<ng-container>
+    <common-drawer [components]="components"></common-drawer>
+    <div class="container">
+        Main Content
+    </div>
+</ng-container>
 <router-outlet></router-outlet>

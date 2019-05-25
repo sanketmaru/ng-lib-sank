@@ -1,0 +1,11 @@
+@import '../../variables.scss';
+
+.sidenav-drawer {
+    margin-top: $toolbar-height;
+    color: $secondary-color-redtheme;
+    position: absolute;
+    background: #e57373;
+    height: 100vh;
+    width: 240px;
+    overflow: auto;
+}

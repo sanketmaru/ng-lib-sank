@@ -1,0 +1,29 @@
+@import '../../variables.scss';
+
+.toolbar {
+    background-color: $primary-color-redtheme;
+    height: $toolbar-height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.hamburger {
+    left: 30px;
+    position: fixed;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 18px;
+    height: 2px;
+    background-color: $secondary-color-redtheme !important;
+    display: block;
+    margin: 10px 0px 10px 0px;
+    transition: all 0.3s ease-in-out;
+}
