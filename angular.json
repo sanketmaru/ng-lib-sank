@@ -144,7 +144,7 @@
       "root": "projects/ng-lib-sank",
       "sourceRoot": "projects/ng-lib-sank/src",
       "projectType": "library",
-      "prefix": "sank",
+      "prefix": "common",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgLibSankCarouselModule, NgLibSankCardModule } from 'ng-lib-sank';
+import { NgLibSankCarouselModule, NgLibSankCardModule, SidenavModule } from 'ng-lib-sank';
 
 @NgModule({
   declarations: [
@@ -11,9 +12,11 @@ import { NgLibSankCarouselModule, NgLibSankCardModule } from 'ng-lib-sank';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgLibSankCarouselModule,
-    NgLibSankCardModule
+    NgLibSankCardModule,
+    SidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

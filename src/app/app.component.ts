@@ -17,11 +17,11 @@ export class AppComponent {
     this.imagesData = [{
       title: 'Image 1',
       description: 'Image 1 desc',
-      image: 'https://www.isoi.edu.pk/system/files/node_gallery/13997705508_a218e00c81_b_1.jpeg'
+      image: 'https://images.unsplash.com/photo-1558685160-140e422ea847?ixlib=rb-1.2.1&auto=format&fit=crop&w=2620&q=80'
     }, {
       title: 'Image 1',
       description: 'Image 1 desc',
-      image: 'https://www.isoi.edu.pk/system/files/node_gallery/sample1_l_1.jpeg'
+      image: 'https://images.unsplash.com/photo-1558685160-140e422ea847?ixlib=rb-1.2.1&auto=format&fit=crop&w=2620&q=80'
     }];
   }
 

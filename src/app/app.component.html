@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<button (click)="setViewToCarousel()">Carousel View</button>
+<!-- <button (click)="setViewToCarousel()">Carousel View</button>
 <button (click)="setViewToGrid()">Grid View</button>
 
 <sank-carousel [data]="imagesData" *ngIf="isCarouselView()">
@@ -13,6 +13,12 @@
     <ng-container *ngIf="isGridView()">
         <sank-card [item]="data"></sank-card>
     </ng-container>
-</div>
+</div> -->
+<ng-container>
+    <div class="container">
+        <common-sidenav></common-sidenav>
+    </div>
+    
+</ng-container>
 
 <router-outlet></router-outlet>
