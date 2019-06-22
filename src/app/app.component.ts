@@ -17,13 +17,13 @@ export class AppComponent {
   public components: [DrawerConfig<DrawerItemComponent>, DrawerConfig<DrawerItemComponent>] = [
     {
       type: DrawerItemComponent,
-      context: {
+      data: {
         name: 'First Component'
       }
     },
     {
       type: DrawerItemComponent,
-      context: {
+      data: {
         name: 'Second Component'
       }
     }

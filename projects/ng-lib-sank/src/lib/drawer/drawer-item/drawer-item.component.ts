@@ -14,13 +14,8 @@ export class DrawerItemComponent extends DrawerBaseComponent<DrawerItemContent> 
 
   public name: string;
 
-  constructor() {
-    super();
-  }
-
   ngOnInit() {
-    console.log('name', this.context.name);
-    this.name = this.context.name;
+    this.name = this.data.name;
   }
 
 }

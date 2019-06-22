@@ -30,7 +30,7 @@ export class DrawerComponent implements OnInit {
       const factory = this.resolver.resolveComponentFactory(sideNavComponent.type);
       const componentRef = this.vc.createComponent(factory);
       const component = componentRef.instance;
-      component.context = sideNavComponent.context;
+      component.data = sideNavComponent.data;
     });
 
   }
