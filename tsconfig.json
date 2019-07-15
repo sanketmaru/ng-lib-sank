@@ -18,14 +18,6 @@
     "lib": [
       "es2018",
       "dom"
-    ],
-    "paths": {
-      "ng-lib-sank": [
-        "dist/ng-lib-sank"
-      ],
-      "ng-lib-sank/*": [
-        "dist/ng-lib-sank/*"
-      ]
-    }
+    ]
   }
 }
