@@ -15,11 +15,15 @@
     </ng-container>
 </div> -->
 
-<common-toolbar></common-toolbar>
-
-<common-drawer [components]="components"></common-drawer>
-<div class="container">
-    Main Content
+<div class="app-layout">
+    <common-toolbar></common-toolbar>
+    <div class="app-content">
+        <common-drawer [components]="components"></common-drawer>
+        <div class="app-container">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
 </div>
 
-<router-outlet></router-outlet>
+
+

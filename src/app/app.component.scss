@@ -13,12 +13,26 @@ body {
     background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
 }
 
-.container {
+.app-layout {
     margin-top: 8vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-content {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.app-container {
     color: #FFEBEE;
     background: #ffcdd2;
     height: 100vh;
-    width: 70%;
-    position: absolute;
-    right: 0;
+    flex: 0 1 100%;
+}
+
+common-drawer {
+    flex: 1 1 30%;
 }

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { MatSidenavModule } from '@angular/material';
 
 import { DrawerComponent } from './drawer.component';
 import { DrawerItemComponent } from './drawer-item/drawer-item.component';
@@ -8,7 +9,8 @@ import { DrawerItemComponent } from './drawer-item/drawer-item.component';
   declarations: [DrawerComponent, DrawerItemComponent],
   entryComponents: [DrawerItemComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    MatSidenavModule
   ],
   exports: [DrawerComponent, DrawerItemComponent]
 })
