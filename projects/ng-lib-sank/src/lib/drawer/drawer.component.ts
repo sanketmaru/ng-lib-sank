@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, ViewChild,
-  ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
+  ViewContainerRef, ComponentFactoryResolver, Output, EventEmitter } from '@angular/core';
 import { DrawerConfig } from './drawer-item/drawer-item-config';
 
 @Component({
@@ -9,6 +9,7 @@ import { DrawerConfig } from './drawer-item/drawer-item-config';
 })
 export class DrawerComponent implements OnInit {
   @Input() public components: DrawerConfig[] = [];
+  @Output() public drawerInit = new EventEmitter<DrawerConfig[]>();
 
   @ViewChild('vc', {read: ViewContainerRef}) vc: ViewContainerRef;
 

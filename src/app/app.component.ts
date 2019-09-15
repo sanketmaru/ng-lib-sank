@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { DrawerConfig, DrawerItemComponent } from 'ng-lib-sank';
+import { DrawerConfig, DrawerItemComponent, DrawerItemContent } from 'ng-lib-sank';
+import { Subject } from 'rxjs';
 
 enum View {
   GRID = 'grid',
   CAROUSEL = 'carousel'
-};
+}
 
 @Component({
   selector: 'app-root',
@@ -14,17 +15,22 @@ enum View {
 export class AppComponent {
   public imagesData = [];
   public view: string = View.CAROUSEL;
+  public content$ = new Subject<string>();
   public components: [DrawerConfig<DrawerItemComponent>, DrawerConfig<DrawerItemComponent>] = [
     {
       type: DrawerItemComponent,
       data: {
-        name: 'First Component'
+        name: 'First Component',
+        route: 'first',
+        content$: this.content$
       }
     },
     {
       type: DrawerItemComponent,
       data: {
-        name: 'Second Component'
+        name: 'Second Component',
+        route: 'second',
+        content$: this.content$
       }
     }
   ];
@@ -38,6 +44,9 @@ export class AppComponent {
       description: 'Image 1 desc',
       image: 'https://images.unsplash.com/photo-1558685160-140e422ea847?ixlib=rb-1.2.1&auto=format&fit=crop&w=2620&q=80'
     }];
+    this.content$.subscribe( (data) => {
+      console.log('data in app component', data);
+    });
   }
 
   public isCarouselView() {

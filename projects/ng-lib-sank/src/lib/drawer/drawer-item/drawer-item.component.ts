@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { DrawerBaseComponent } from './drawer-base.component';
+import { Subject } from 'rxjs';
 
 export interface DrawerItemContent {
   name: string;
+  route: string;
+  content$: Subject<string>;
 }
 
 @Component({
@@ -14,8 +17,12 @@ export class DrawerItemComponent extends DrawerBaseComponent<DrawerItemContent> 
 
   public name: string;
 
-  ngOnInit() {
+    ngOnInit() {
     this.name = this.data.name;
+  }
+
+  goToRoute() {
+    this.data.content$.next(this.data.route);
   }
 
 }
