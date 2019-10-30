@@ -14,6 +14,7 @@
     "copy-files": "npm run copy-license && npm run copy-readme",
     "npm_pack": "cd dist/ng-lib-sank && npm pack",
     "package": "npm run build:lib && npm run copy-files && npm run npm_pack",
+    "publish": "npm publish ./dist/ng-lib-sank/ng-lib-sank-0.0.5.tgz",
     "build:dev": "npm run build:lib && cp -r "
   },
   "private": true,

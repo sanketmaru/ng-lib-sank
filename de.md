@@ -194,3 +194,56 @@ For creating a component factory we need to pass a component `Type` which is fro
 We assign the data using component reference instance which contains the name as `First Component` and `Second Component`. 
 
 This makes our task easier to define the side navigation components dynamically as we want. They will get destroyed and created depending upon the components you pass.
+
+---
+**Handle Routing**
+
+Now we have basic application ready with the drawer items defined. To define the routing we will change the data passed to the `DrawerItemComponent`. 
+
+```javascript
+export interface DrawerItemContent {
+  name: string;
+  route: string;
+  content$: Subject<string>;
+}
+```
+
+Above `route` will be a route path and content$ is a subject which application will subscribe to whenever any drawer item is clicked. 
+
+```javascript
+goToRoute() {
+  this.data.content$.next(this.data.route);
+}
+```
+Once the sidenav is clicked we call the next of subject. 
+
+This subject is created in our app which gets called whenever there is a change. 
+
+```javascript
+public content$ = new Subject<string>();
+public components: [DrawerConfig<DrawerItemComponent>, DrawerConfig<DrawerItemComponent>] = [
+  {
+    type: DrawerItemComponent,
+    data: {
+      name: 'First Component',
+      route: 'first',
+      content$: this.content$
+    }
+  },
+  {
+    type: DrawerItemComponent,
+    data: {
+      name: 'Second Component',
+      route: 'second',
+      content$: this.content$
+    }
+  }
+];
+this.content$.subscribe( (data) => {
+  console.log('data in app component', data);
+  // handle the logic to route
+  this.router.navigate([data]);
+});
+```
+
+*For simplicity, complete code is not defined here.*

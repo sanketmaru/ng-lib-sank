@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { DrawerConfig, DrawerItemComponent, DrawerItemContent } from 'ng-lib-sank';
+import { Router } from '@angular/router';
+import { DrawerConfig, DrawerItemComponent } from 'ng-lib-sank';
 import { Subject } from 'rxjs';
 
 enum View {
@@ -34,7 +35,7 @@ export class AppComponent {
       }
     }
   ];
-  constructor() {
+  constructor(private router: Router) {
     this.imagesData = [{
       title: 'Image 1',
       description: 'Image 1 desc',
@@ -46,6 +47,7 @@ export class AppComponent {
     }];
     this.content$.subscribe( (data) => {
       console.log('data in app component', data);
+      this.router.navigate([data]);
     });
   }
 

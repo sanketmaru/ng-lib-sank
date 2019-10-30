@@ -1,14 +1,18 @@
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { DrawerModule, NgLibSankCardModule, NgLibSankCarouselModule, ToolbarModule } from 'ng-lib-sank';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgLibSankCarouselModule, NgLibSankCardModule, DrawerModule, ToolbarModule } from 'ng-lib-sank';
+import { FirstComponent } from './first.component';
+import { SecondComponent } from './second.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FirstComponent,
+    SecondComponent
   ],
   imports: [
     BrowserModule,
