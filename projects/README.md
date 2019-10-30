@@ -1,10 +1,3 @@
----
-title: SideNav with Dynamic Components In Angular
-published: false
-description: Dynamic Side navigations in Angular 
-tags: angular, typescript, javascript, generics
----
-
 This blog posts talks about creation of SideNav Navigations using Dynamic Components In Angular. 
 
 Creation of dynamic components involves using Angular Dynamic Components and also using Typescript's Generic feature. 
@@ -77,6 +70,11 @@ To summarise, Generics help us to create classes or Components in Angular that c
 ---
 
 **Dynamic Drawer Component**
+
+*Before creating any components and understanding how this works, its important to have a use case in front of use. 
+
+It can be as simple as if user searching from a particular list and selecting one of the options which redirects him to a particular route and renders that sidenavigation option in sidenav.*
+
 
 We will create a component using Angular Material [Sidenav](https://material.angular.io/components/sidenav/overview). This component will contain a sidenav container where all drawer items will be added. 
 
@@ -246,4 +244,18 @@ this.content$.subscribe( (data) => {
 });
 ```
 
-*For simplicity, complete code is not defined here.*
+**Demo**
+
+![](https://media.giphy.com/media/JQuboSZ1dwAsOBaS2U/giphy.gif)
+
+
+**Source**
+
+For simplicity, complete code is not defined in the blog.
+
+The complete source code for the drawer component is created in a ng-library and can be found at [ng-lib-sank](https://github.com/sanketmaru/ng-lib-sank/tree/master/projects). 
+
+This component is consumed in [angular-labs](https://github.com/sanketmaru/angular-labs), inside [app.component.ts](https://github.com/sanketmaru/angular-labs/blob/master/src/app/app.component.ts#L19).
+
+
+Hope this helps you in understanding dynamic components and the use case of creating side navigation components on the fly.
